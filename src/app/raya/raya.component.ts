@@ -12,4 +12,18 @@ export class RayaComponent {
   constructor() {
     this.partida = new raya();
   }
+
+  occuparCelda(row: number, col: number) {
+    //console.log(row, col);
+    if(this.pudedoPoner(row, col)){
+      this.partida.celdas[row][col] = "X";
+    }else{
+      console.log("no se puede poner");
+    }
+  }
+
+  pudedoPoner(row: number, col: number): boolean {
+    return true;
+    //TODO
+  }
 }
